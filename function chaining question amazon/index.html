@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function chaining || amazon || recursion</title>
+  </head>
+  <body>
+    <h2>Function chaining</h2>
+    <h3>Amazon Interview Question</h3>
+    <h4>recursion concept</h4>
+
+    <pre><code class="language-js">
+
+        let sum=function (a){ 
+            return function (b){ 
+                if(b){ 
+                    return sum(a+b); 
+                }
+                return a; 
+    } 
+}    
+    </code></pre>
+
+    <p>ES6 syntax with arrow functions</p>
+
+    <pre><code class="language-js">
+        let sum=(a)=>{
+            (b)=>{
+                return b?sum(a+b):a;
+            }
+        }
+    </code></pre>
+
+    <p>Using a single line with arrow functions</p>
+
+    <pre><code class="language-js">
+        let sum=a=>b=> return b?sum(a+b):a;
+    </code></pre>
+    <script src="index.js"></script>
+
+    <!-- Prism CSS -->
+    <!-- Prism Dark Theme: Okaidia -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-okaidia.css"
+      rel="stylesheet"
+    />
+
+    <!-- Prism JS -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+  </body>
+</html>
